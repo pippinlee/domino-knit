@@ -1,0 +1,74 @@
+body {
+  background-color: rgba(153, 153, 153, 0.06);
+}
+
+h3 {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 900;
+  background-color: rgb(231, 176, 76);
+  color: #F1F1F1;
+  width: 800px;
+  margin: 0 auto;
+  padding: 0;
+  margin-left: -100px;
+  height: 100px;
+  margin-top: -100px;
+  padding-top: 80px;
+  letter-spacing: 0.1em;
+}
+
+section {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  width: 600px;
+  background-color: white;
+  padding:  100px;
+  box-shadow: rgba(153, 153, 153, 0.12) 0px 0px 2px 1px;
+  -webkit-box-shadow: rgba(153, 153, 153, 0.12) 0px 0px 2px 1px;
+}
+
+section > p {
+  text-align: left;
+  font-size: 20px;
+  line-height: 1.5em;
+  color: #555;
+  font-family: 'Merriweather', serif;
+  font-weight: 100;
+}
+
+#ex {
+  color: #999;
+  border: 1px solid #999;
+  padding: 10px;
+  font-style: italic;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+#answerStich, #stichNum, #rowAnswer {
+  display: inline;
+  color: red;
+}
+
+#rowNum {
+  color: #999;
+  font-family: sans-serif;
+  font-size: 32px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-color: whitesmoke;
+}
+
+textarea {
+  width: 200px;
+  height: 40px;
+  text-align: center;
+}
+
+h4 {
+  font-size: 22px;
+  font-family: 'Merriweather', serif;
+}
