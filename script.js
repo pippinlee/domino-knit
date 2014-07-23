@@ -2,13 +2,23 @@
 
 $('#rowNum').focus();
 
+$.fn.focusWithoutScrolling = function(){
+  var x = window.scrollX, y = window.scrollY;
+  this.focus();
+  window.scrollTo(x, y);
+  return this;
+
+};
+
+$('#rowNum').focusWithoutScrolling();
+
 // Use the keyup method to update automatically
 $('#rowNum').keyup(function() {
   // Save the current textbox value
   var finalRowVal = $('textarea').val();
   // console.log(finalRowVal);
 
-  // This is the first half of the calculation. We take the user's input and do basic arithmatic 
+  // This is the first half of the calculation. We take the user's input and do basic arithmatic
   // to find how many stitches will be needed to finish the piece
   var totalStitch = 0;
   var stitchCount = finalRowVal;
