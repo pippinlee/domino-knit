@@ -68,7 +68,21 @@ textarea {
   text-align: center;
 }
 
-h4 {
+h4 {0
   font-size: 22px;
   font-family: 'Merriweather', serif;
+}
+
+footer {
+  margin-top: 100px;
+  height: 100px;
+  margin-bottom: -100px;
+  margin-left: -100px;
+  background-color: #FDEDED;
+  width: 800px;
+  font-size: 20px;
+  padding-top: 50px;
+  font-family: 'Open Sans', sans-serif;
+  color: #999;
+}
 }
