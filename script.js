@@ -9,36 +9,36 @@ $('#rowNum').keyup(function() {
   // console.log(finalRowVal);
 
   // This is the first half of the calculation. We take the user's input and do basic arithmatic 
-  // to find how many stiches will be needed to finish the piece
-  var totalStich = 0;
-  var stichCount = finalRowVal;
-  var finalStichCount = stichCount;
-  while (stichCount > 0) {
-    totalStich += (stichCount*2);
-    // console.log(totalStich);
-    stichCount -= 2;
+  // to find how many stitches will be needed to finish the piece
+  var totalStitch = 0;
+  var stitchCount = finalRowVal;
+  var finalStitchCount = stitchCount;
+  while (stitchCount > 0) {
+    totalStitch += (stitchCount*2);
+    // console.log(totalStitch);
+    stitchCount -= 2;
   }
 
-  // Let's get back the original stich count value that we saved above in the variable finalRowVal
-  var finalStichCount = finalRowVal;
+  // Let's get back the original stitch count value that we saved above in the variable finalRowVal
+  var finalStitchCount = finalRowVal;
 
   // Uncomment the below line for more detail behind the calculations
-  // console.log('the final amount of stiches when the amount of rows is ' + finalStichCount + ' will be ' + totalStich);
+  // console.log('the final amount of stitches when the amount of rows is ' + finalStitchCount + ' will be ' + totalStitch);
 
 
   var i = finalRowVal;
   var answer = 0;
   var currentRow = 1;
-  var halfStich = totalStich/2;
+  var halfStitch = totalStitch/2;
 
-  // This represents the second half of the equation. We take the previous calculation of total stiches
-  // and use it to find the midpoint stich
-  while (answer < halfStich) {
+  // This represents the second half of the equation. We take the previous calculation of total stitches
+  // and use it to find the midpoint stitch
+  while (answer < halfStitch) {
     // We need to multiple each each by 2, because it will be repeated twice
      answer += i*2;
-     // To stop the loop going if the total amount of stiches has been passed we can check if we've already
-     // reached the total amount of stiches theat we previously found
-     if (answer > halfStich) {
+     // To stop the loop going if the total amount of stitches has been passed we can check if we've already
+     // reached the total amount of stitches theat we previously found
+     if (answer > halfStitch) {
         break;
      }
 
@@ -51,11 +51,11 @@ $('#rowNum').keyup(function() {
 
      // Uncomment the below lines below to get more detail
      // console.log('the number of stitches on this line is ' + i);
-     // console.log('the total number of stiches is: ' + answer);
+     // console.log('the total number of stitches is: ' + answer);
 
      // Let's grab the values we calculated and give them to the user on the page
-     $('#answerStich').text(totalStich);
-     $('#stichNum').text(totalStich/2);
+     $('#answerStitch').text(totalStitch);
+     $('#stitchNum').text(totalStitch/2);
      $('#rowAnswer').text(currentRow+1);
   }
 

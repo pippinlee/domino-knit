@@ -48,7 +48,7 @@ section > p {
   margin-bottom: 40px;
 }
 
-#answerStich, #stichNum, #rowAnswer {
+#answerStitch, #stitchNum, #rowAnswer {
   display: inline;
   color: red;
 }
