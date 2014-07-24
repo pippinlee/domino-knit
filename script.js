@@ -3,7 +3,7 @@
 $('#rowNum').focus();
 
 $.fn.focusWithoutScrolling = function(){
-  var x = window.scrollX, y = window.scrollY;
+  var x = $(document).scrollLeft(), y = $(document).scrollTop();
   this.focus();
   window.scrollTo(x, y);
   return this;
@@ -34,7 +34,6 @@ $('#rowNum').keyup(function() {
 
   // Uncomment the below line for more detail behind the calculations
   // console.log('the final amount of stitches when the amount of rows is ' + finalStitchCount + ' will be ' + totalStitch);
-
 
   var i = finalRowVal;
   var answer = 0;
@@ -68,5 +67,4 @@ $('#rowNum').keyup(function() {
      $('#stitchNum').text(totalStitch/2);
      $('#rowAnswer').text(currentRow+1);
   }
-
 });
