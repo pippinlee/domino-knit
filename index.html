@@ -10,16 +10,16 @@
 
   <section>
     <h3> DOMINO KNITTING PATTERN - CALCULATOR</h3>
-    <p>The goal of this small calculator is to tell you where to switch colors, let's pose the problem.</p>
-    <p id="ex">Given a knitter is starting with X stitches in a row and the number of stitches decreases by 2 every other row, on what row will the knitter reach half the total number of stitches in the piece.</p>
-    <p>The above is a fairly <a href="http://www.knittingdaily.com/blogs/daily/archive/2012/01/11/learn-something-new-domino-knitting.aspx">common pattern</a> for knitters who are completing squares.</p>
+    <p>The goal of this small calculator is to tell you where to switch colours in a domino-knitting square. Let's pose the problem.</p>
+    <p id="ex">Suppose that a knitter is starting with X stitches in a row and that the decreases by 2 stitches every other row. On what row will the knitter reach half the total number of stitches in the square?</p>
+    <p>This is the kind of question that a mathematically minded knitter might ask when designing a <a href="http://www.knittingdaily.com/blogs/daily/archive/2012/01/11/learn-something-new-domino-knitting.aspx">domino knitting</a> pattern. This program helps you find the half-way point.</p>
 
     <img src="knit.png">
 
-    <p>The box below will allow you to enter the number of stitches in your initial row.</p>
-    <p>An example will help us understand exactly what is happening. For instance you could say the initial row will be 59 stitches wide. This means you'll start with 2 rows of 59, then two rows of 57 and so on. This will mean on the 16th row you will hit your 900th stitch, which is half of the total amount of stitches which would be 1800.</p>
-    <p>Why is this helpful? Often using the domino knitting pattern one will want to find the half point of the total number of stitches, where they can switch colors. So in the above example, the first 900 stitches could be in one colour, and the second 900 stitches could be another.</p>
-    <p>Go ahead and try different row numbers to see where your half point is:</p>
+    <p>Enter the number of stitches in your initial row into the box below.</p>
+    <p>Let's look at an example. Say you're starting wtih 59 stitches in your initial row (either cast on or picked up). This means your first 2 rows will have 59 stitches, totalling 118 stitches. Your next 2 rows will have 57 stitches, giving 118 + 114 = 232 stitches, and so on. If you keep adding up the stitches like this, you'll find that the total number of stitches in the square will be 1800. Half this number is 900. The program tells us that on the 16th row you will hit your 900th stitch: the half-way point. If you want your square to have about equal numbers of stitches in two colours, you should change colours at the end of the 16th row.</p>
+    
+    <p>Go ahead and try different row numbers to see where your half-way point is:</p>
 
     <form>
         <textarea name="d" id="rowNum">42</textarea>
@@ -30,6 +30,8 @@
     <footer>Happy knitting.</footer>
   </section>
 
+<p>Enter the number of stitches in your initial row into the box below.If you are wondering how many stitches there are on your needle for this row, so you don't have to count rows, here's your answer:</p>
+ <h4>There will be XXX stitches in that row.</h4>
   <script type="text/javascript" src='jquery.js'></script>
   <script type="text/javascript" src="script.js"></script>
 </body>
