@@ -1,70 +1,41 @@
-// jquery for interactive
+// inputValue is the value in the input field
+// totalStitch calculates the total amount of stitches to complete the square
+// stitchCount helps count down the stitches left
+// answer helps us know when we've hit our row limit
+// currentRow is the currentRow in the calculation
+// halfStitch is the halfway point in the calculation
 
-$('#rowNum').focus();
+function valueKeyPress(){
+  var inputBox = document.getElementById('rowNum');
+  var inputValue = inputBox.value;
+  var answerBox = document.getElementById('answerStitch');
+  var stitchBox = document.getElementById('stitchNum');
+  var rowBox = document.getElementById('rowAnswer');
 
-$.fn.focusWithoutScrolling = function(){
-  var x = $(document).scrollLeft(), y = $(document).scrollTop();
-  this.focus();
-  window.scrollTo(x, y);
-  return this;
-
-};
-
-$('#rowNum').focusWithoutScrolling();
-
-// Use the keyup method to update automatically
-$('#rowNum').keyup(function() {
-  // Save the current textbox value
-  var finalRowVal = $('textarea').val();
-  // console.log(finalRowVal);
-
-  // This is the first half of the calculation. We take the user's input and do basic arithmatic
-  // to find how many stitches will be needed to finish the piece
   var totalStitch = 0;
-  var stitchCount = finalRowVal;
-  var finalStitchCount = stitchCount;
+  var stitchCount = inputValue;
+
   while (stitchCount > 0) {
-    totalStitch += (stitchCount*2);
-    // console.log(totalStitch);
+    totalStitch += (stitchCount * 2);
     stitchCount -= 2;
   }
 
-  // Let's get back the original stitch count value that we saved above in the variable finalRowVal
-  var finalStitchCount = finalRowVal;
-
-  // Uncomment the below line for more detail behind the calculations
-  // console.log('the final amount of stitches when the amount of rows is ' + finalStitchCount + ' will be ' + totalStitch);
-
-  var i = finalRowVal;
+  var i = inputValue;
   var answer = 0;
   var currentRow = 1;
   var halfStitch = totalStitch/2;
 
-  // This represents the second half of the equation. We take the previous calculation of total stitches
-  // and use it to find the midpoint stitch
   while (answer < halfStitch) {
-    // We need to multiple each each by 2, because it will be repeated twice
-     answer += i*2;
-     // To stop the loop going if the total amount of stitches has been passed we can check if we've already
-     // reached the total amount of stitches theat we previously found
-     if (answer > halfStitch) {
-        break;
-     }
+    answer += i*2;
+    if (answer > halfStitch) {
+      break;
+    }
+    currentRow += 2;
+    i -= 2;
 
-     // console.log('you are on currentRow: ' + currentRow);
-     // We can now calculate the row value where the midpoint exists
-     currentRow += 2;
-
-     // To go through all knitted rows, we decrease by two
-     i -= 2;
-
-     // Uncomment the below lines below to get more detail
-     // console.log('the number of stitches on this line is ' + i);
-     // console.log('the total number of stitches is: ' + answer);
-
-     // Let's grab the values we calculated and give them to the user on the page
-     $('#answerStitch').text(totalStitch);
-     $('#stitchNum').text(totalStitch/2);
-     $('#rowAnswer').text(currentRow+1);
+    answerBox.innerHTML = totalStitch;
+    stitchBox.innerHTML = totalStitch/2;
+    rowBox.innerHTML = currentRow+1;
   }
-});
+
+}
